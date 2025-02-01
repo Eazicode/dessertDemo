@@ -110,10 +110,13 @@ for (const cartBtn of cartBtns) {
 
     myTotal.textContent = `$${total}`
 
-    //
+    const orderContainer = document.getElementById('order-container')
+    const emptyCart = document.getElementById('empty-cart');
+
+    emptyCart.style.display = 'none'
+    orderContainer.style.display = 'block'
 
   })
 }
-
 
 
