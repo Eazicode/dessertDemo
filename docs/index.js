@@ -85,7 +85,6 @@ for (const cartBtn of cartBtns) {
       return null
     })[0]
 
-
     if (!item) {
       cart.push({ ...cartItemData, amount: 1 })
     }
@@ -94,7 +93,6 @@ for (const cartBtn of cartBtns) {
       cart[index].amount += 1
     }
 
-    // console.log(cart)
     cartContainer.innerHTML = ""
     for (let i = 0; i < cart.length; i++) {
       const cartItem = createNewCartItem(cart[i].name, cart[i].price.toFixed(2), cart[i].amount)
@@ -116,7 +114,18 @@ for (const cartBtn of cartBtns) {
     emptyCart.style.display = 'none'
     orderContainer.style.display = 'block'
 
+    const cartAmount = document.getElementById('cart-amount')
+
+    let cartAmountArray = []
+    for (let i = 0; i < cart.length; i++) {
+      cartAmountArray.push(cart[i].amount)
+    }
+
+    let totalAmount = 0;
+    for (let i = 0; i < cartAmountArray.length; i++) {
+      totalAmount += cartAmountArray[i]
+    }
+    cartAmount.innerHTML = `Your Cart(${totalAmount})`
   })
 }
-
 
