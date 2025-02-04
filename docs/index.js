@@ -125,7 +125,7 @@ for (const cartBtn of cartBtns) {
     for (let i = 0; i < cartAmountArray.length; i++) {
       totalAmount += cartAmountArray[i]
     }
-    cartAmount.innerHTML = `Your Cart(${totalAmount})`
+    cartAmount.innerHTML = `Your Cart (${totalAmount})`
   })
 }
 
