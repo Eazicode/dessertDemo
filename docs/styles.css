@@ -35,7 +35,23 @@
         margin-bottom: 50px;
     }
     .desserts-images {
-        grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    .desserts-image {
+        height: 290px;
+    }
+    .cart-section {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1140px) {
+    .desserts-section {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .desserts-images {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
     .desserts-image {
         height: 290px;
